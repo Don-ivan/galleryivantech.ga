@@ -62,12 +62,29 @@
 <center><h1 style="font-family:georgia; color:magenta;">NATURE</h1></center>
 <div class="box">
 
-<center><a href="evening.html"><img src="IMG_20211222_020312.jpg"></a> <a href="outerspace.html" ><img src="IMG_20211222_024406.jpg"></a></center>
+<center><a href="evening.html"><img name="slide"></a> <a href="outerspace.html" ><img src="IMG_20211222_024406.jpg"></a></center>
 <center><a href="boats.html"><img src="IMG_20211222_215252.jpg"></a> <a href="mount.html"><img src="IMG_20220317_193815.jpg"></a></center>
 <center><a href="trees.html"><img src="IMG_20211217_202448.jpg"></a> <a href="good.html"><img src="IMG_20220107_225150.jpg"></a></center>
 
 <center><button><a href="next.html" >NEXT</button></center>
 </div>
 <center><h1 style="color:white; font-family:georgia; background:purple; font-size:15px;">Developed by Muyonjo Ivan Storm High School.</h1></center>
+ <script type="text/javascript">
+ var i = 0;
+ var time = 3000;
+ images = [];
+ images[0] = 'IMG_20211222_020312.jpg';
+ images[1] = 'IMG_20220321_102809.jpg';
+ images[2] = 'IMG_20220321_102516.jpg';
+ images[3] = 'IMG_20220321_102720.jpg';
+ 
+ function changeImage(){
+ document.slide.src = images[i];
+ if(i<images.length-1){i++;}
+ else{i=0;}
+ setTimeout("changeImage",time);}
+ window.onload = changeImage;
+ setInterval(changeImage,3000)
+     </script>
 </body>
 </html>
